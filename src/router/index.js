@@ -8,7 +8,6 @@ import Triangle from '@/views/triangle'
 import Sales from '@/views/sales/'
 
 
-import Two from '@/views/two/'
 import Four from '@/views/four/'
 import Seven from '@/views/seven/'
 import Nine from '@/views/nine/'
@@ -52,11 +51,6 @@ const routes = [
         path:'/sales',
         name:'sales',
         component:Sales
-      },
-      {
-        path:'/two',
-        name:'two',
-        component:Two
       },
       {
         path:'/four',
