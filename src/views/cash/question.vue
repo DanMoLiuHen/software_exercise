@@ -7,8 +7,7 @@
       <p>研究一个与我们的生活息息相关的电信收费问题系统，需求描述如下：</p>
       <p>
         A.
-        <b>每月的电话总费用=基本月租费+折扣后的实际的通话费</b
-        >，如果没有折扣则按实际通话费计算，基本月租费为25元，每分钟通话费为0.15元。
+        <b>每月的电话总费用=基本月租费+折扣后的实际的通话费</b>，如果没有折扣则按实际通话费计算，基本月租费为25元，每分钟通话费为0.15元。
       </p>
       <p>
         B.
@@ -20,26 +19,11 @@
       </p>
       <p>D. 通话时间和折扣比例及未按时缴费次数的关系为：</p>
       <el-table :data="questionData" style="width: 100%; font-size: 16px">
-        <el-table-column
-          prop="minute"
-          label="本月通话的分钟数"
-          width="400"
-
-          align="center"
-        >
+        <el-table-column prop="minute" label="本月通话的分钟数" width="400" align="center">
         </el-table-column>
-        <el-table-column
-          prop="times"
-          label="通话时间段的最大容许不按时缴费次数"
-          width="400"
-          align="center"
-        >
+        <el-table-column prop="times" label="通话时间段的最大容许不按时缴费次数" width="400" align="center">
         </el-table-column>
-        <el-table-column
-          prop="discount"
-          label="通话时间段的折扣率"
-          align="center"
-        >
+        <el-table-column prop="discount" label="通话时间段的折扣率" align="center">
         </el-table-column>
       </el-table>
     </div>
@@ -75,7 +59,7 @@ export default {
           discount: "2.5%",
         },
         {
-          minute: "通话时间>300",
+          minute: "300<通话时间",
           times: 6,
           discount: "3.0%",
         },
@@ -84,11 +68,10 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
-  mounted() {},
+  created() { },
+  mounted() { },
   methods: {},
 };
 </script>
 
-<style scoped lang="less">
-</style>
+<style scoped lang="less"></style>
