@@ -1,16 +1,182 @@
 [
-    {"id": "TS1","M": "1","I": "1","P":"1","predict":"正常","pre_amount":"100","pre_earn":"10"},
-    {"id": "TS2","M": "2","I": "1","P":"1","predict":"正常","pre_amount":"125","pre_earn":"12.5"},
-    {"id": "TS3","M": "5","I": "5","P":"5","predict":"正常","pre_amount":"500","pre_earn":"50"},
-    {"id": "TS4","M": "9","I": "9","P":"11","predict":"正常","pre_amount":"990","pre_earn":"99"},
-    {"id": "TS5","M": "10","I": "10","P":"10","predict":"正常","pre_amount":"1000","pre_earn":"100"},
-    {"id": "TS6","M": "11","I": "10","P":"10","predict":"正常","pre_amount":"1025","pre_earn":"153.75"},
-    {"id": "TS7","M": "14","I": "14","P":"14","predict":"正常","pre_amount":"1400","pre_earn":"210"},
-    {"id": "TS8","M": "17","I": "17","P":"19","predict":"正常","pre_amount":"1790","pre_earn":"268.5"},
-    {"id": "TS9","M": "18","I": "18","P":"18","predict":"正常","pre_amount":"1800","pre_earn":"270"},
-    {"id": "TS10","M": "19","I": "18","P":"18","predict":"正常","pre_amount":"1825","pre_earn":"365"},
-    {"id": "TS11","M": "50","I": "50","P":"50","predict":"正常","pre_amount":"5000","pre_earn":"1000"},
-    {"id": "TS12","M": "70","I": "80","P":"89","predict":"正常","pre_amount":"8155","pre_earn":"1635"},
-    {"id": "TS13","M": "70","I": "80","P":"90","predict":"正常","pre_amount":"8200","pre_earn":"1640"}
-
+    {
+        "id": "TS1",
+        "M": "0",
+        "I": "40",
+        "P": "40",
+        "predict": "错误",
+        "pre_amount": "-1",
+        "pre_earn": "-1"
+    },
+    {
+        "id": "TS2",
+        "M": "1",
+        "I": "40",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "3025",
+        "pre_earn": "605"
+    },
+    {
+        "id": "TS3",
+        "M": "2",
+        "I": "40",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "3050",
+        "pre_earn": "50"
+    },
+    {
+        "id": "TS4",
+        "M": "69",
+        "I": "40",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "4725",
+        "pre_earn": "945"
+    },
+    {
+        "id": "TS5",
+        "M": "70",
+        "I": "40",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "4750",
+        "pre_earn": "950"
+    },
+    {
+        "id": "TS6",
+        "M": "71",
+        "I": "40",
+        "P": "40",
+        "predict": "错误",
+        "pre_amount": "-1",
+        "pre_earn": "-1"
+    },
+    {
+        "id": "TS7",
+        "M": "40",
+        "I": "0",
+        "P": "40",
+        "predict": "错误",
+        "pre_amount": "-1",
+        "pre_earn": "-1"
+    },
+    {
+        "id": "TS8",
+        "M": "40",
+        "I": "1",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "2830",
+        "pre_earn": "566"
+    },
+    {
+        "id": "TS9",
+        "M": "40",
+        "I": "2",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "2860",
+        "pre_earn": "572"
+    },
+    {
+        "id": "TS10",
+        "M": "40",
+        "I": "79",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "5170",
+        "pre_earn": "1034"
+    },
+    {
+        "id": "TS11",
+        "M": "40",
+        "I": "80",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "5200",
+        "pre_earn": "1040"
+    },
+    {
+        "id": "TS12",
+        "M": "40",
+        "I": "81",
+        "P": "40",
+        "predict": "错误",
+        "pre_amount": "-1",
+        "pre_earn": "-1"
+    },
+    {
+        "id": "TS13",
+        "M": "40",
+        "I": "40",
+        "P": "0",
+        "predict": "错误",
+        "pre_amount": "-1",
+        "pre_earn": "-1"
+    },
+    {
+        "id": "TS14",
+        "M": "40",
+        "I": "40",
+        "P": "1",
+        "predict": "正常",
+        "pre_amount": "2245",
+        "pre_earn": "449"
+    },
+    {
+        "id": "TS15",
+        "M": "40",
+        "I": "40",
+        "P": "2",
+        "predict": "正常",
+        "pre_amount": "2290",
+        "pre_earn": "458"
+    },
+    {
+        "id": "TS16",
+        "M": "40",
+        "I": "40",
+        "P": "89",
+        "predict": "正常",
+        "pre_amount": "6205",
+        "pre_earn": "1241"
+    },
+    {
+        "id": "TS17",
+        "M": "40",
+        "I": "40",
+        "P": "90",
+        "predict": "正常",
+        "pre_amount": "6250",
+        "pre_earn": "1250"
+    },
+    {
+        "id": "TS18",
+        "M": "40",
+        "I": "40",
+        "P": "91",
+        "predict": "错误",
+        "pre_amount": "-1",
+        "pre_earn": "-1"
+    },
+    {
+        "id": "TS19",
+        "M": "40",
+        "I": "40",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "4000",
+        "pre_earn": "800"
+    },
+    {
+        "id": "TS20",
+        "M": "-1",
+        "I": "40",
+        "P": "40",
+        "predict": "正常",
+        "pre_amount": "计算本月销售额",
+        "pre_earn": "计算本月销售额"
+    }
 ]

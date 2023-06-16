@@ -2,76 +2,27 @@
   <div class="system-test">
     <div class="main-header">
       <el-select v-model="value" placeholder="请选择测试方法">
-        <el-option
-          v-for="item in options"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        />
+        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
       </el-select>
-      <div class="data-text">测试中日期取2021年5月（共31天）</div>
+      <div class="data-text">测试中日期取2023年5月（共31天）</div>
       <div class="button-group">
-        <el-button
-          class="main-button"
-          type="success"
-          plain
-          @click="doTest"
-          :loading="loading"
-          >进行测试<i class="el-icon-upload el-icon--right"></i
-        ></el-button>
-        <el-button
-          @click="reset(value)"
-          class="reset-button"
-          type="warning"
-          plain
-          >重置</el-button
-        >
+        <el-button class="main-button" type="success" plain @click="doTest" :loading="loading">进行测试<i
+            class="el-icon-upload el-icon--right"></i></el-button>
+        <el-button @click="reset(value)" class="reset-button" type="warning" plain>重置</el-button>
       </div>
     </div>
 
     <el-divider content-position="left">测试用例</el-divider>
 
     <div class="main-table">
-      <el-table
-        :data="tableData"
-        :height="tableHeight"
-        border
-        style="width: 100%"
-        v-loading="loading"
-        :row-class-name="tableRowClassName"
-      >
-        <el-table-column
-          prop="id"
-          label="测试用例编号"
-          width="120"
-          align="center"
-        ></el-table-column>
-        <el-table-column
-          prop="X"
-          label="本月的通话分钟数X（分钟）"
-          width="240"
-          align="center"
-        ></el-table-column>
-        <el-table-column
-          prop="Y"
-          label="本年度至本月的累计未按时缴费的次数Y（次）"
-          align="center"
-        ></el-table-column>
-        <el-table-column
-          prop="expectation"
-          label="每月的电话总费用预期输出"
-          align="center"
-        ></el-table-column>
-        <el-table-column
-          prop="actual"
-          label="每月的电话总费用实际输出"
-          align="center"
-        ></el-table-column>
-        <el-table-column
-          prop="info"
-          label="程序运行信息"
-          align="center"
-        ></el-table-column>
+      <el-table :data="tableData" :height="tableHeight" border style="width: 100%" v-loading="loading"
+        :row-class-name="tableRowClassName">
+        <el-table-column prop="id" label="测试用例编号" width="120" align="center"></el-table-column>
+        <el-table-column prop="X" label="本月的通话分钟数X（分钟）" width="240" align="center"></el-table-column>
+        <el-table-column prop="Y" label="本年度至本月的累计未按时缴费的次数Y（次）" align="center"></el-table-column>
+        <el-table-column prop="expectation" label="每月的电话总费用预期输出" align="center"></el-table-column>
+        <el-table-column prop="actual" label="每月的电话总费用实际输出" align="center"></el-table-column>
+        <el-table-column prop="info" label="程序运行信息" align="center"></el-table-column>
         <el-table-column prop="state" label="测试结果" align="center">
           <template slot-scope="scope">
             <div v-if="scope.row.state == true" class="icon-svg">
@@ -82,11 +33,7 @@
             </div>
           </template>
         </el-table-column>
-        <el-table-column
-          prop="time"
-          label="测试时间"
-          align="center"
-        ></el-table-column>
+        <el-table-column prop="time" label="测试时间" align="center"></el-table-column>
       </el-table>
     </div>
   </div>
@@ -126,7 +73,7 @@ export default {
       immediate: false,
     },
   },
-  created() {},
+  created() { },
   mounted() {
     this.initTableData(cash_bug_mock_1_json);
     this.json = cash_bug_mock_1_json;
@@ -236,23 +183,28 @@ export default {
 /deep/ .el-table .error-row {
   background: #fff0f0;
 }
+
 /deep/ .el-table .success-row {
   background-color: #f7fff9;
 }
+
 .main-button {
   width: 500px;
   margin-top: 10px;
 }
+
 .reset-button {
   width: 200px;
   margin-top: 10px;
 }
+
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .main-table {
   height: 100%;
   display: flex;
