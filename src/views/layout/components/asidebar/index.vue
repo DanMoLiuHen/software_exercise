@@ -24,7 +24,7 @@
           <el-menu-item index="/ten">第10题：ERP系统</el-menu-item>
           <el-menu-item index="/eleven">第11题：实时Web系统</el-menu-item>
           <el-menu-item index="/twelve">第12题：构建程序图</el-menu-item>
-          <el-menu-item index="/thirteen">第13题：销售系统</el-menu-item>
+          <el-menu-item index="/thirteen">第17题：销售系统</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <!-- <el-menu-item index="2">

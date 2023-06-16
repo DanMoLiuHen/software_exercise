@@ -25,3 +25,6 @@ views中是所有的视图
 └─twelve
 ```
 在views中home与layout控制整体布局（包括侧边栏等），`route`中控制路由
+
+## 组件参考
+[elementui](https://element.eleme.cn/#/zh-CN/component/installation)
