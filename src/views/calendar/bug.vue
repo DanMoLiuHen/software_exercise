@@ -107,7 +107,7 @@ export default {
   props: ["parentHeight"],
   data() {
     return {
-      options: [{ value: "1", label: "bug_v1_年月日输入全零的情况" }],
+      options: [{ value: "1", label: "年月日输入全零的情况" }],
       value: "1",
       tableData: [],
       loading: false,

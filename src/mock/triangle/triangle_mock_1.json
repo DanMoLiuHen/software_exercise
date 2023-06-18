@@ -1,23 +1,135 @@
 [
-  
-    {"id": "TS1","A": -1,"B": 127,"C":127,"expectation":"不构成三角形"},
-    {"id": "TS2","A": 1,"B": 127,"C":127,"expectation":"等腰三角形"},
-    {"id": "TS3","A": 3,"B": 127,"C":127,"expectation":"等腰三角形"},
-    {"id": "TS4","A": 254,"B": 127,"C":127,"expectation":"不构成三角形"},
-    {"id": "TS5","A": 256,"B": 127,"C":127,"expectation":"不构成三角形"},
-    {"id": "TS6","A": 257,"B": 127,"C":127,"expectation":"不构成三角形"},
-    {"id": "TS7","A": 127,"B": -1,"C":127,"expectation":"不构成三角形"},
-    {"id": "TS8","A": 127,"B": 1,"C":127,"expectation":"等腰三角形"},
-    {"id": "TS9","A": 127,"B": 3,"C":127,"expectation":"等腰三角形"},
-    {"id": "TS10","A": 127,"B": 254,"C":127,"expectation":"不构成三角形"},
-    {"id": "TS11","A": 127,"B": 256,"C":127,"expectation":"不构成三角形"},
-    {"id": "TS12","A": 127,"B": 257,"C":127,"expectation":"不构成三角形"},
-    {"id": "TS13","A": 127,"B": 127,"C":-1,"expectation":"不构成三角形"},
-    {"id": "TS14","A": 127,"B": 127,"C":1,"expectation":"等腰三角形"},
-    {"id": "TS15","A": 127,"B": 127,"C":3,"expectation":"等腰三角形"},
-    {"id": "TS16","A": 127,"B": 127,"C":254,"expectation":"不构成三角形"},
-    {"id": "TS17","A": 127,"B": 127,"C":256,"expectation":"不构成三角形"},
-    {"id": "TS18","A": 127,"B": 127,"C":257,"expectation":"不构成三角形"},
-    {"id": "TS19","A": 127,"B": 127,"C":127,"expectation":"等边三角形"}
-
-  ]
+  {
+    "id": "1",
+    "A": "0",
+    "B": "400",
+    "C": "400",
+    "expectation": "a can't be 0"
+  },
+  {
+    "id": "2",
+    "A": "1",
+    "B": "400",
+    "C": "400",
+    "expectation": "Isosceles triangle"
+  },
+  {
+    "id": "3",
+    "A": "-1",
+    "B": "400",
+    "C": "400",
+    "expectation": "a can't < 0"
+  },
+  {
+    "id": "4",
+    "A": "400",
+    "B": "400",
+    "C": "400",
+    "expectation": "Equilateral triangle"
+  },
+  {
+    "id": "5",
+    "A": "799",
+    "B": "400",
+    "C": "400",
+    "expectation": "Isosceles triangle"
+  },
+  {
+    "id": "6",
+    "A": "800",
+    "B": "400",
+    "C": "400",
+    "expectation": "Not triangle"
+  },
+  {
+    "id": "7",
+    "A": "801",
+    "B": "400",
+    "C": "400",
+    "expectation": "a is not in the range of value"
+  },
+  {
+    "id": "8",
+    "A": "400",
+    "B": "0",
+    "C": "400",
+    "expectation": "b can't be 0"
+  },
+  {
+    "id": "9",
+    "A": "400",
+    "B": "1",
+    "C": "400",
+    "expectation": "Isosceles triangle"
+  },
+  {
+    "id": "10",
+    "A": "400",
+    "B": "-1",
+    "C": "400",
+    "expectation": "b can't < 0"
+  },
+  {
+    "id": "11",
+    "A": "400",
+    "B": "799",
+    "C": "400",
+    "expectation": "Not triangle"
+  },
+  {
+    "id": "12",
+    "A": "400",
+    "B": "800",
+    "C": "400",
+    "expectation": "Isosceles triangle"
+  },
+  {
+    "id": "13",
+    "A": "400",
+    "B": "801",
+    "C": "400",
+    "expectation": "b is not in the range of value"
+  },
+  {
+    "id": "14",
+    "A": "400",
+    "B": "400",
+    "C": "0",
+    "expectation": "c can't be 0"
+  },
+  {
+    "id": "15",
+    "A": "400",
+    "B": "400",
+    "C": "1",
+    "expectation": "Isosceles triangle"
+  },
+  {
+    "id": "16",
+    "A": "400",
+    "B": "400",
+    "C": "-1",
+    "expectation": "c can't < 0"
+  },
+  {
+    "id": "17",
+    "A": "400",
+    "B": "400",
+    "C": "799",
+    "expectation": "Isosceles triangle"
+  },
+  {
+    "id": "18",
+    "A": "400",
+    "B": "400",
+    "C": "800",
+    "expectation": "Not triangle"
+  },
+  {
+    "id": "19",
+    "A": "400",
+    "B": "400",
+    "C": "801",
+    "expectation": "c is not in the range of value"
+  }
+]
