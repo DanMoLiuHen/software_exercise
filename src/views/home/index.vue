@@ -1,6 +1,8 @@
 <template>
     <div class="main-container">
-       <img width="600" src="./main-bg.png"/>
+      <el-image
+        style="width: 800px; height: 600px"
+        :src="require('/src/views/home/cat.jpg')"></el-image>
     </div>
 </template>
 
