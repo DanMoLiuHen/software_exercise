@@ -7,9 +7,27 @@
       </p>
       <p> 根据题意设计流程图并设计测试用例实现白盒测试（White Box Test）的1）语句覆盖，2）判断覆盖，3）条件覆盖，4）判断—条件覆盖，5）条件组合覆盖（测试用例及覆盖表示要清晰）。</p>
     </div>
+    <el-divider></el-divider>
 
-    <el-image src="src/views/thirteen/17.jpeg"></el-image>
-    <p style="margin-top:50px;">语句覆盖：</p>
+    <el-row :gutter="10">
+      <el-col :span="6">
+        <h3>名词命名</h3>
+        <p>年销售额：AnnualSales</p>
+        <p>请假天数：LeaveDays</p>
+        <p>现金到账率： CashtoAccountRate </p>
+        <p>佣金系数： CommissionCoefficient</p>
+        <p>佣金值： Commission</p>
+      </el-col>
+    </el-row>
+    <el-row :gutter="10">
+      <el-col :span="1"></el-col>
+      <el-col :span="22">
+        <el-image :src="require('/src/views/thirteen/17.jpeg')"></el-image>
+      </el-col>
+      <el-col :span="1"></el-col>
+    </el-row>
+    <el-divider></el-divider>
+    <h3>语句覆盖</h3>
     <p>无条件语句的序列作为一个节点，对所有节点进行覆盖</p>
     <p>TC1: acdfjk</p>
     <p>销售额：300万RMB；请假天数：9天；现金到账：60%；</p>
@@ -19,7 +37,8 @@
     <p>销售额：100万RMB；请假天数：9天；现金到账：90%；</p>
     <p>TC4: acehjk</p>
     <p>销售额：100万RMB；请假天数：9天；现金到账：80%；</p>
-    <p style="margin-top:50px;">判断覆盖：</p>
+    <el-divider></el-divider>
+    <h3>判断覆盖</h3>
     <p>每个判断的真分支和假分支都至少经历一次</p>
     <p>TC1: acdfjk</p>
     <p>销售额：300万RMB；请假天数：9天；现金到账：60%；</p>
@@ -31,8 +50,8 @@
     <p>销售额：100万RMB；请假天数：9天；现金到账：80%；</p>
     <p>TC5: ab</p>
     <p>销售额：-10万RMB；请假天数：-9天；现金到账：-10%；</p>
-
-    <p style="margin-top:50px;">条件覆盖：</p>
+    <el-divider></el-divider>
+    <h3>条件覆盖</h3>
     <p>要使得每个判断中的每个条件的可能取值至少满足一次。</p>
     <el-table :data="questionData" style="width: 60%;font-size:12px;">
       <el-table-column prop="con" label="条件" width="140" align="center">
@@ -43,7 +62,8 @@
       </el-table-column>
     </el-table>
 
-    <p>测试用例：</p>
+    <el-divider></el-divider>
+    <h3>测试用例</h3>
     <p>TC1: F1 T2 T3 F4 F5 F6 F7</p>
     <p>销售额：100万RMB；请假天数：9天；现金到账：50%；</p>
     <p>TC2： F1 F2 F3 T4 F5 F6 F7</p>
