@@ -1,4 +1,5 @@
 <template>
+  <!-- 电脑销售系统 -->
   <div style="height: 100%" ref="tabs">
     <el-card id="main-card" style="height: 100%" shadow="hover">
       <el-tabs v-model="activeName" @tab-click="handleClick">

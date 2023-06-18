@@ -22,7 +22,7 @@
     <el-row :gutter="10">
       <el-col :span="1"></el-col>
       <el-col :span="22">
-        <el-image :src="require('/src/views/thirteen/17.jpeg')"></el-image>
+        <el-image :src="require('/src/views/seventeen/17.jpeg')"></el-image>
       </el-col>
       <el-col :span="1"></el-col>
     </el-row>

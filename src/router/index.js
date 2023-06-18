@@ -3,16 +3,22 @@ import VueRouter from 'vue-router'
 import Login from '@/views/login/'
 import Home from '@/views/home/'
 import Layout from '@/views/layout/'
-import Cash from '@/views/cash/'
+
+// 判断三角形
 import Triangle from '@/views/triangle'
+// 万年历
+import Calendar from '@/views/calendar'
+// 电脑销售系统
 import Sales from '@/views/sales/'
+// 电信收费
+import Cash from '@/views/cash/'
+// 15.ATM
+import Fifteen from '@/views/fifteen/'
+// 16.构建程序图
+import Sixteen from '@/views/sixteen/'
+// 17.销售系统
+import Seventeen from '@/views/seventeen/'
 
-
-import Seven from '@/views/seven/'
-import Ten from '@/views/ten/'
-import Eleven from '@/views/eleven/'
-import Twelve from '@/views/twelve/'
-import Thirteen from '@/views/thirteen/'
 
 Vue.use(VueRouter)
 
@@ -43,7 +49,7 @@ const routes = [
       {
         path:'/calendar',
         name:'calendar',
-        component: () => import("@/views/calendar")
+        component:Calendar
       },
       {
         path:'/sales',
@@ -51,29 +57,19 @@ const routes = [
         component:Sales
       },
       {
-        path:'/seven',
-        name:'seven',
-        component:Seven
+        path:'/fifteen',
+        name:'fifteen',
+        component:Fifteen
       },
       {
-        path:'/ten',
-        name:'ten',
-        component:Ten
+        path:'/sixteen',
+        name:'sixteen',
+        component:Sixteen
       },
       {
-        path:'/eleven',
-        name:'eleven',
-        component:Eleven
-      },
-      {
-        path:'/twelve',
-        name:'twelve',
-        component:Twelve
-      },
-      {
-        path:'/thirteen',
-        name:'thirteen',
-        component:Thirteen
+        path:'/seventeen',
+        name:'seventeen',
+        component:Seventeen
       }
     ]
   }

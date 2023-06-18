@@ -24,7 +24,7 @@
 
 import SalesQuestion from "./question";
 export default {
-  name: "seven",
+  name: "fifteen",
   components: { SalesQuestion },
   props: {},
   data() {

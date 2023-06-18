@@ -20,11 +20,9 @@
           <el-menu-item index="/calendar">万年历问题</el-menu-item>
           <el-menu-item index="/triangle">判断三角形</el-menu-item>
           <el-menu-item index="/sales">电脑销售系统</el-menu-item>
-          <el-menu-item index="/seven">第7题：实时系统</el-menu-item>
-          <el-menu-item index="/ten">第10题：ERP系统</el-menu-item>
-          <el-menu-item index="/eleven">第11题：实时Web系统</el-menu-item>
-          <el-menu-item index="/twelve">第12题：构建程序图</el-menu-item>
-          <el-menu-item index="/thirteen">第17题：销售系统</el-menu-item>
+          <el-menu-item index="/fifteen">第15题：ATM</el-menu-item>
+          <el-menu-item index="/sixteen">第16题：构建程序图</el-menu-item>
+          <el-menu-item index="/seventeen">第17题：销售系统</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <!-- <el-menu-item index="2">
