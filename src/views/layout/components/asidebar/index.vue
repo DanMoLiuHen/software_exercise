@@ -25,19 +25,9 @@
           <el-menu-item index="/seventeen">第17题：销售系统</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
-      <el-menu-item index="/cash"><i class="el-icon-location"></i>课程项目</el-menu-item>
-      <!-- <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
+      <el-menu-item>
+      <el-link style="color:aliceblue" href="#" target="_blank" :underline="false"><i class="el-icon-location"></i>课程项目</el-link>
       </el-menu-item>
-      <el-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
-      </el-menu-item> -->
     </el-menu>
 </template>
 
