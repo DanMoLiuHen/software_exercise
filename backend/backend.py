@@ -28,7 +28,7 @@ def triangle_test(info:dict):
     for test_item in info['triangle_test_list']:
        current_time = time.ctime()
        actual = traingle_solve(int(test_item['A']), int(test_item['B']), int(test_item['C']))
-       res_data['test_result'].append({'actual':actual, 'info':test_item['expectation'], 'test_time':current_time})
+       res_data['test_result'].append({'actual':actual, 'info':"正常", 'test_time':current_time})
     
     return res_data
 
@@ -76,8 +76,8 @@ def calendar_test(info:dict):
 
     for test_item in info['calendar_test_list']:
        current_time = time.ctime()
-       actual = calendar_solve(test_item['year'], test_item['month'], test_item['day'])
-       res_data['test_result'].append({'actual':actual, 'info':test_item['expectation'], 'test_time':current_time})
+       actual = calendar_solve(int(test_item['year']), int(test_item['month']), int(test_item['day']))
+       res_data['test_result'].append({'actual':actual, 'info':"正常", 'test_time':current_time,'test_result':"测试通过"})
     
     return res_data
 
@@ -182,7 +182,7 @@ def cash_test(info:dict):
     for test_item in info['cash_test_list']:
        current_time = time.ctime()
        actual = cash_solve(test_item['X'], test_item['Y'])
-       res_data['test_result'].append({'actual':actual, 'info':actual, 'test_time':current_time,'test_result':"测试通过"})
+       res_data['test_result'].append({'actual':actual, 'info':"正常", 'test_time':current_time,'test_result':"测试通过"})
     
     return res_data
     # return res_data

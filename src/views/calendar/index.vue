@@ -1,7 +1,7 @@
 <template>
   <!-- 万年历 -->
-  <div style="height: 100%" ref="tabs">
-    <el-card style="height: 100%" shadow="hover">
+  <div ref="tabs">
+    <el-card shadow="hover">
       <el-tabs v-model="activeName">
         <el-tab-pane label="问题描述" name="first">
           <CalendarQuestion />
@@ -13,10 +13,6 @@
 
         <el-tab-pane label="单测试用例输入" name="third">
           <SingleCase />
-        </el-tab-pane>
-
-        <el-tab-pane label="测试用例文件处理" name="fourth">
-          <ExcelFile />
         </el-tab-pane>
 
         <el-tab-pane label="缺陷版本记录" name="fifth">
@@ -31,7 +27,6 @@
 import CalendarQuestion from "./question";
 import SystemTest from "./systemtest";
 import SingleCase from "./singlecase";
-import ExcelFile from "./excelfile";
 import BugRecord from "./bug";
 
 export default {
@@ -40,7 +35,6 @@ export default {
     CalendarQuestion,
     SystemTest,
     SingleCase,
-    ExcelFile,
     BugRecord
   },
   props: {},

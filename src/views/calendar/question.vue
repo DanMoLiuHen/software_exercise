@@ -1,12 +1,13 @@
 <template>
-  <div>
+  <div style="height: 420px">
     <span style="font-size: 24px"><b>&nbsp;万年历问题</b></span>
-    <div style="font-size: 17px">
-      <p>在本题中，我们需要根据输入的年月日三个正整数变量，
-        若该日期是一个合法日期，则以"yyyy-mm-dd"的形式输出，
-        若该日期不是一个合法日期，则应输出-1.
-      </p>
-    </div>
+    <p>本问题输入为年月日，输出为输入年月日的下一天，输出格式为xxxx-xx-xx.</p>
+    <p>如果年份越界，输出“Year Exceed”。</p>
+    <p>如果月份越界，输出“Month Exceed”。</p>
+    <p>如果日期越界，输出“Day Exceed”。</p>
+    <p>若三者都越界，则输出“Illegal Case”</p>
+    <p>如果输出的日期不符合月份要求，则输出“day is out of range for month”。</p>
+    <p>我们规定 1<= Month <=12，1<=Day<=31，对于年份的范围，规定2000<= Year <=2100。</p>
   </div>
 </template>
 

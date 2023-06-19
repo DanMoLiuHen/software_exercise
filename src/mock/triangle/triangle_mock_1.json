@@ -39,7 +39,7 @@
     "A": "800",
     "B": "400",
     "C": "400",
-    "expectation": "Not triangle"
+    "expectation": "a is not in the range of value"
   },
   {
     "id": "7",
@@ -74,14 +74,14 @@
     "A": "400",
     "B": "799",
     "C": "400",
-    "expectation": "Not triangle"
+    "expectation": "Isosceles triangle"
   },
   {
     "id": "12",
     "A": "400",
     "B": "800",
     "C": "400",
-    "expectation": "Isosceles triangle"
+    "expectation": "b is not in the range of value"
   },
   {
     "id": "13",
@@ -123,7 +123,7 @@
     "A": "400",
     "B": "400",
     "C": "800",
-    "expectation": "Not triangle"
+    "expectation": "c is not in the range of value"
   },
   {
     "id": "19",

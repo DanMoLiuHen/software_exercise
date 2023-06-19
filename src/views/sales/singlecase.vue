@@ -34,6 +34,8 @@
         >进行测试<i class="el-icon-upload el-icon--right"></i
       ></el-button>
         <div>
+    <el-divider></el-divider>
+    <br>
     <span>实际状态：{{S}}</span>
     <el-divider direction="vertical"></el-divider>
     <span>实际销售额：{{A}}</span>

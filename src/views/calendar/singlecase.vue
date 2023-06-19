@@ -16,6 +16,8 @@
     </el-form>
     <el-button class="main-button" type="success" plain @click="doTest" :loading="loading">进行测试<i
         class="el-icon-upload el-icon--right"></i></el-button>
+    <el-divider></el-divider>
+    <br>
     <div>
       <span>实际输出：{{ actual }}</span>
       <el-divider direction="vertical"></el-divider>

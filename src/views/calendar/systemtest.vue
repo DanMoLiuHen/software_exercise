@@ -1,22 +1,19 @@
 <template>
-  <div class="system-test">
-    <div class="main-header">
-      <el-select v-model="value" placeholder="请选择测试方法">
-        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-      </el-select>
-
-      <div class="button-group">
-        <el-button class="main-button" type="success" plain @click="doTest" :loading="loading">进行测试<i
-            class="el-icon-upload el-icon--right"></i></el-button>
-        <el-button @click="reset(value)" class="reset-button" type="warning" plain>重置</el-button>
-      </div>
-    </div>
-
+  <div>
+    <el-row :gutter="10">
+      <el-col :span="8">
+        <el-select v-model="value" placeholder="请选择测试方法">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
+        </el-select>
+      </el-col>
+      <el-col :span="8">
+        <el-button type="success" plain @click="doTest" :loading="loading">进行测试<i class="el-icon-upload el-icon--right"></i></el-button>
+        <el-button @click="reset(value)" type="warning" plain>重置</el-button>
+      </el-col>
+    </el-row>
     <el-divider content-position="right">测试用例</el-divider>
 
-    <div class="main-table">
-      <el-table :data="tableData" :height="tableHeight" border style="width: 100%" v-loading="loading"
-        :row-class-name="tableRowClassName">
+      <el-table :data="tableData" border v-loading="loading" :row-class-name="tableRowClassName">
         <el-table-column prop="id" label="测试用例编号" width="120" align="center"></el-table-column>
         <el-table-column prop="year" label="年份" width="120" align="center"></el-table-column>
         <el-table-column prop="month" width="120" label="月份" align="center"></el-table-column>
@@ -37,12 +34,12 @@
         <el-table-column prop="time" label="测试时间" align="center"></el-table-column>
       </el-table>
     </div>
-  </div>
 </template>
 
 <script>
 import mock_1_json from "@/mock/calendar/calendar_mock_1.json";
 import mock_2_json from "@/mock/calendar/calendar_mock_2.json";
+import mock_3_json from "@/mock/calendar/calendar_mock_3.json";
 import { testcalendar } from "@/api/calendartest.js";
 export default {
   name: "SystemTest",
@@ -53,6 +50,7 @@ export default {
       options: [
         { value: "1", label: "健壮边界值分析" },
         { value: "2", label: "强健壮等价类测试" },
+        { value: "3", label: "决策表法测试" },
       ],
       value: "1",
       tableData: [],
@@ -101,9 +99,13 @@ export default {
         newData = {
           calendar_test_list: mock_1_json,
         };
-      } else {
+      } else if(this.value==="2") {
         newData = {
           calendar_test_list: mock_2_json,
+        };
+      }else if(this.value==="3"){
+        newData = {
+          calendar_test_list: mock_3_json,
         };
       }
       const _this = this;
@@ -112,6 +114,7 @@ export default {
         .then((res) => {
           _this.tableData.forEach((item, index) => {
             let responseObject = res.data.test_result[index];
+            console.log(responseObject);
             item.actual = responseObject.actual;
             item.info = responseObject.info;
             item.state =
@@ -138,7 +141,7 @@ export default {
       } else if (value === "2") {
         this.initTableData(mock_2_json);
       } else {
-        this.initTableData(mock_2_json);
+        this.initTableData(mock_3_json);
       }
     },
   },
