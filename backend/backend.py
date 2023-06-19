@@ -181,7 +181,7 @@ def cash_test(info:dict):
 
     for test_item in info['cash_test_list']:
        current_time = time.ctime()
-       actual = cash_solve(test_item['X'], test_item['Y'])
+       actual = cash_solve(int(test_item['X']), int(test_item['Y']))
        res_data['test_result'].append({'actual':actual, 'info':"正常", 'test_time':current_time,'test_result':"测试通过"})
     
     return res_data
