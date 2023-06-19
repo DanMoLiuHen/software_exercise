@@ -11,9 +11,6 @@
         <el-date-picker v-model="date" type="month" placeholder="选择月" value-format="yyyy-MM">
         </el-date-picker>
       </el-form-item>
-      <el-form-item label="每月的电话总费用预期输出">
-        <el-input v-model="formLabelAlign.expectation"></el-input>
-      </el-form-item>
     </el-form>
     <el-button class="main-button" type="success" plain @click="doTest" :loading="loading">进行测试<i
         class="el-icon-upload el-icon--right"></i></el-button>

@@ -15,15 +15,6 @@
       <el-form-item label="销售的外设数量P（套）">
         <el-input v-model="formLabelAlign.P"></el-input>
       </el-form-item>
-      <el-form-item label="预计状态（正常/错误）">
-        <el-input v-model="formLabelAlign.predict"></el-input>
-      </el-form-item>
-      <el-form-item label="预计销售额（元）">
-        <el-input v-model="formLabelAlign.pre_amount"></el-input>
-      </el-form-item>
-      <el-form-item label="预计佣金（元）">
-        <el-input v-model="formLabelAlign.pre_earn"></el-input>
-      </el-form-item>
     </el-form>
           <el-button
         class="main-button"

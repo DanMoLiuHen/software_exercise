@@ -1,17 +1,19 @@
 <template>
   <div class="system-test">
-    <div class="main-header">
-      <el-select v-model="value" placeholder="请选择测试方法">
-        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-      </el-select>
-      <div class="data-text">测试中日期取2023年5月（共31天）</div>
-      <div class="button-group">
-        <el-button class="main-button" type="success" plain @click="doTest" :loading="loading">进行测试<i
-            class="el-icon-upload el-icon--right"></i></el-button>
-        <el-button @click="reset(value)" class="reset-button" type="warning" plain>重置</el-button>
-      </div>
-    </div>
-
+    <el-row :gutter="10">
+      <el-col :span="7">
+        <el-select v-model="value" placeholder="请选择测试方法">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
+        </el-select>
+      </el-col>
+      <el-col :span="8">
+        <p>测试中日期取2023年5月（共31天）</p>
+      </el-col>
+      <el-col :span="7">
+        <el-button type="success" plain @click="doTest" :loading="loading">进行测试<i class="el-icon-upload el-icon--right"></i></el-button>
+        <el-button @click="reset(value)" type="warning" plain>重置</el-button>
+      </el-col>
+    </el-row>
     <el-divider content-position="left">测试用例</el-divider>
 
     <div class="main-table">
@@ -50,8 +52,8 @@ export default {
   data() {
     return {
       options: [
-        { value: "1", label: "bug_v1_无法处理负数请求" },
-        { value: "2", label: "bug_v2_无法处理非数字请求" },
+        { value: "1", label: "无法处理负数请求" },
+        { value: "2", label: "无法处理非数字请求" },
       ],
       value: "1",
       tableData: [],

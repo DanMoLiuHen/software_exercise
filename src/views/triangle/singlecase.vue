@@ -10,9 +10,6 @@
       <el-form-item label="第三条边的值">
         <el-input v-model="formLabelAlign.C"></el-input>
       </el-form-item>
-      <el-form-item label="程序预期输出">
-        <el-input v-model="formLabelAlign.expectation"></el-input>
-      </el-form-item>
     </el-form>
     <el-button class="main-button" type="success" plain @click="doTest" :loading="loading">进行测试<i
         class="el-icon-upload el-icon--right"></i></el-button>
