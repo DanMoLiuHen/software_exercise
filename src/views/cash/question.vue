@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
 
     <span style="font-size: 24px"><b>&nbsp;电信收费问题</b></span>
     <div style="font-size: 16px">

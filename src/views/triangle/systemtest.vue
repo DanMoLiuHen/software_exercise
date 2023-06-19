@@ -33,9 +33,7 @@
     <div class="main-table">
       <el-table
         :data="tableData"
-        :height="tableHeight"
         border
-        style="width: 100%"
         v-loading="loading"
         :row-class-name="tableRowClassName"
       >
@@ -157,10 +155,12 @@ export default {
       //  change newData's structure
       const _this = this;
       this.loading = true;
+      console.log('input',this.inputData);
       testtriangle(this.inputData)
         .then((res) => {
           _this.tableData.forEach((item, index) => {
             let responseObject = res.data.test_result[index];
+            console.log(responseObject);
             item.actual = responseObject.actual;
             item.info = responseObject.info;
             item.state = item.expectation == item.actual ? true : false;

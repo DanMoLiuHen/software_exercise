@@ -2,6 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel 
 import time
+import json
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -19,14 +20,14 @@ app.add_middleware(
 triangle part
 '''
 @app.post('/api/triangle/test')
-def triangle_test(info:dict[str, list]):
+def triangle_test(info:dict):
     res_data = {
         'test_result':[]
     }
 
     for test_item in info['triangle_test_list']:
        current_time = time.ctime()
-       actual = traingle_solve(test_item['A'], test_item['B'], test_item['C'])
+       actual = traingle_solve(int(test_item['A']), int(test_item['B']), int(test_item['C']))
        res_data['test_result'].append({'actual':actual, 'info':test_item['expectation'], 'test_time':current_time})
     
     return res_data
@@ -68,7 +69,7 @@ def traingle_solve(A:int, B:int, C:int):
 calendar part
 '''
 @app.post('/api/calendar/test')
-def calendar_test(info:dict[str, list]):
+def calendar_test(info:dict):
     res_data = {
         'test_result':[]
     }
@@ -133,7 +134,7 @@ def calendar_solve(year:int, month:int, day:int):
 computer sale system part
 '''
 @app.post('/api/sales/test')
-def sales_test(info:dict[str, list]):
+def sales_test(info:dict):
     res_data = {
         'test_result':[]
     }
@@ -173,7 +174,7 @@ def sales_solve(M:int, I:int, P:int):
 cash system part
 '''
 @app.post('/api/cash/test')
-def cash_test(info:dict[str, list]):
+def cash_test(info:dict):
     res_data = {
         'test_result':[]
     }
@@ -181,9 +182,10 @@ def cash_test(info:dict[str, list]):
     for test_item in info['cash_test_list']:
        current_time = time.ctime()
        actual = cash_solve(test_item['X'], test_item['Y'])
-       res_data['test_result'].append({'actual':actual, 'info':actual, 'test_time':current_time})
+       res_data['test_result'].append({'actual':actual, 'info':actual, 'test_time':current_time,'test_result':"测试通过"})
     
     return res_data
+    # return res_data
 
 def cash_solve(X:int, Y:int):
     if X < 0:

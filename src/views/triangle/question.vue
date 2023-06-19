@@ -1,19 +1,16 @@
 <template>
-  <div>
+  <div style="height: 420px">
     <span style="font-size: 24px"><b>&nbsp;判断三角形问题</b></span>
     <div style="font-size: 16px">
       <p>判断三角形类型问题，需求描述如下：</p>
       <p>
-        A.
-        输入三个整数a,b,c,作为三角形三条边，通过程序判断三条边构成的三角形类型：一般三角形，等边三角形，等腰三角形，不构成三角形
+        A. 本题的输入变量为三个整数变量a,b,c作为三角形的三条边。
       </p>
       <p>
-        B.
-        <b>a&lt;b+c; b&lt;a+c; c&lt;a+b;</b>
+        B. 对三角形类型进行划分，分别为Equilateral triangle(等边三角形)，Isosceles triangle(等 腰三角形)，Normal triangle(普通三角形)和Not triangle(非三角形)。 
       </p>
       <p>
-        C.
-        <b>1&lt;=a&lt;=256;1&lt;=b&lt;=256;1&lt;=c&lt;=256;</b>
+        C. 人工加上三条边的取值范围为(0,800)。 
       </p>
       
     </div>

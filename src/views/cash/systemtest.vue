@@ -1,41 +1,41 @@
 <template>
-  <div class="system-test">
-    <div class="main-header">
-      <el-select v-model="value" placeholder="请选择测试方法">
-        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-      </el-select>
-      <div class="data-text">测试中日期取2023年5月（共31天）</div>
-      <div class="button-group">
-        <el-button class="main-button" type="success" plain @click="doTest" :loading="loading">进行测试<i
+  <div>
+    <el-row :gutter="10">
+      <el-col :span="7">
+        <el-select v-model="value" placeholder="请选择测试方法                         ">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
+        </el-select>  
+      </el-col>
+      <el-col :span="8">
+        <span>测试中日期取2023年5月（共31天）</span>
+      </el-col>
+      <el-col :span="7">
+        <el-button type="success" plain @click="doTest" :loading="loading">进行测试<i
             class="el-icon-upload el-icon--right"></i></el-button>
-        <el-button @click="reset(value)" class="reset-button" type="warning" plain>重置</el-button>
-      </div>
-    </div>
-
+        <el-button @click="reset(value)" type="warning" plain>重置</el-button>
+      </el-col>
+    </el-row>
+        
     <el-divider content-position="left">测试用例</el-divider>
-
-    <div class="main-table">
-      <el-table :data="tableData" :height="tableHeight" border style="width: 100%;" v-loading="loading"
-        :row-class-name="tableRowClassName">
-        <el-table-column prop="id" label="测试用例编号" width="120" align="center"></el-table-column>
-        <el-table-column prop="X" label="本月的通话分钟数X（分钟）" width="240" align="center"></el-table-column>
-        <el-table-column prop="Y" label="本年度至本月的累计未按时缴费的次数Y（次）" align="center"></el-table-column>
-        <el-table-column prop="expectation" label="每月的电话总费用预期输出" align="center"></el-table-column>
-        <el-table-column prop="actual" label="每月的电话总费用实际输出" align="center"></el-table-column>
-        <el-table-column prop="info" label="程序运行信息" align="center"></el-table-column>
-        <el-table-column prop="state" label="测试结果" align="center">
-          <template slot-scope="scope">
-            <div v-if="scope.row.state == true" class="icon-svg">
-              <i class="el-icon-check"></i><span>测试通过</span>
-            </div>
-            <div v-if="scope.row.state == false" class="icon-svg">
-              <i class="el-icon-close"></i><span>测试未通过</span>
-            </div>
-          </template>
-        </el-table-column>
-        <el-table-column prop="time" label="测试时间" align="center"></el-table-column>
-      </el-table>
-    </div>
+    <el-table :data="tableData" border v-loading="loading" :row-class-name="tableRowClassName">
+      <el-table-column prop="id" label="测试用例编号" width="120" align="center"></el-table-column>
+      <el-table-column prop="X" label="本月的通话分钟数X（分钟）" width="240" align="center"></el-table-column>
+      <el-table-column prop="Y" label="本年度至本月的累计未按时缴费的次数Y（次）" align="center"></el-table-column>
+      <el-table-column prop="expectation" label="每月的电话总费用预期输出" align="center"></el-table-column>
+      <el-table-column prop="actual" label="每月的电话总费用实际输出" align="center"></el-table-column>
+      <el-table-column prop="info" label="程序运行信息" align="center"></el-table-column>
+      <el-table-column prop="state" label="测试结果" align="center">
+        <template slot-scope="scope">
+          <div v-if="scope.row.state == true" class="icon-svg">
+            <i class="el-icon-check"></i><span>测试通过</span>
+          </div>
+          <div v-if="scope.row.state == false" class="icon-svg">
+            <i class="el-icon-close"></i><span>测试未通过</span>
+          </div>
+        </template>
+      </el-table-column>
+      <el-table-column prop="time" label="测试时间" align="center"></el-table-column>
+  </el-table>
   </div>
 </template>
 
@@ -114,6 +114,7 @@ export default {
           res => {
             _this.tableData.forEach((item, index) => {
               let responseObject = res.data.test_result[index];
+              console.log(responseObject);
               item.actual = responseObject.actual;
               item.info = responseObject.info;
               item.state = responseObject.test_result == "测试通过" ? true : false;
