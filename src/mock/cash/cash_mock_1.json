@@ -1,6 +1,6 @@
 [
     {
-        "id": "TS1",
+        "id": "1",
         "year": 2023,
         "month": 5,
         "X": 30,
@@ -8,7 +8,7 @@
         "expectation": 29.455
     },
     {
-        "id": "TS2",
+        "id": "2",
         "year": 2023,
         "month": 5,
         "X": 30,
@@ -16,7 +16,7 @@
         "expectation": 29.5
     },
     {
-        "id": "TS3",
+        "id": "3",
         "year": 2023,
         "month": 5,
         "X": 90,
@@ -24,7 +24,7 @@
         "expectation": 38.2975
     },
     {
-        "id": "TS4",
+        "id": "4",
         "year": 2023,
         "month": 5,
         "X": 90,
@@ -32,7 +32,7 @@
         "expectation": 38.5
     },
     {
-        "id": "TS5",
+        "id": "5",
         "year": 2023,
         "month": 5,
         "X": 150,
@@ -40,7 +40,7 @@
         "expectation": 47.05
     },
     {
-        "id": "TS6",
+        "id": "6",
         "year": 2023,
         "month": 5,
         "X": 150,
@@ -48,7 +48,7 @@
         "expectation": 47.5
     },
     {
-        "id": "TS7",
+        "id": "7",
         "year": 2023,
         "month": 5,
         "X": 210,
@@ -56,7 +56,7 @@
         "expectation": 55.7125
     },
     {
-        "id": "TS8",
+        "id": "8",
         "year": 2023,
         "month": 5,
         "X": 210,
@@ -64,7 +64,7 @@
         "expectation": 56.5
     },
     {
-        "id": "TS9",
+        "id": "9",
         "year": 2023,
         "month": 5,
         "X": 350,
@@ -72,7 +72,7 @@
         "expectation": 75.925
     },
     {
-        "id": "TS10",
+        "id": "10",
         "year": 2023,
         "month": 5,
         "X": 350,
